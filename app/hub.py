@@ -230,9 +230,13 @@ class Hub(QObject):
                     self.wallet_cli_manager.send_command(wallet_filepath)
                     self.app_process_events(0.5)
                     self.wallet_cli_manager.send_command(mnemonic_seed)
+                    self.app_process_events(0.5)					
+                    self.wallet_cli_manager.send_command("")
                     self.app_process_events(0.5)
                     self.wallet_cli_manager.send_command(wallet_password)
                     self.app_process_events(0.5)
+                    self.wallet_cli_manager.send_command(wallet_password)
+                    self.app_process_events(0.5)					
                     self.wallet_cli_manager.send_command("0") # rescan from block height 0
                     self.app_process_events(0.5)
                     self.wallet_cli_manager.send_command("exit")
