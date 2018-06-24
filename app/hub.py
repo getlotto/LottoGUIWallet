@@ -271,7 +271,7 @@ class Hub(QObject):
                     self.ui.reset_wallet()
                     return
                 counter += 1
-                if counter > 30:
+                if counter > 120:
                     QMessageBox.critical(self.new_wallet_ui, \
                             'Error Creating/Restoring Wallet',\
                             """Error: Unknown error! Wallet RPC appears not responding.""")

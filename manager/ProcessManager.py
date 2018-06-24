@@ -121,7 +121,7 @@ class WalletCliManager(ProcessManager):
             wallet_args = u'%s/bin/lotto-wallet-cli --generate-new-wallet=%s --create-address-file --log-file=%s' \
                                                 % (resources_path, wallet_file_path, wallet_log_path)
         else:
-            wallet_args = u'%s/bin/lotto-wallet-cli --log-file=%s --restore-deterministic-wallet' \
+            wallet_args = u'%s/bin/lotto-wallet-cli --log-file=%s --restore-deterministic-wallet --restore-height=0 --create-address-file' \
                                                 % (resources_path, wallet_log_path)
         ProcessManager.__init__(self, wallet_args, "lotto-wallet-cli")
         self.ready = Event()

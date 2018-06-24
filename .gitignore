@@ -76,6 +76,7 @@ install_manifest.txt
 .metadata
 .gradle
 bin/
+data/
 tmp/
 *.tmp
 *.bak
